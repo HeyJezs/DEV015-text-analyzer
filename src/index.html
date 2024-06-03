@@ -8,18 +8,18 @@
 </head>
 
 <body>
-  <script src="index.js" type="module"></script>
+  <script src="index.js" type="module" ></script>
   <header>
     <h1> Analizador de Texto</h1>
   </header>
 
   <ul>
-    <li class="met1">Palabras:</li>
-    <li class="met2">Caracteres:</li>
-    <li class="met3">Nro. sin espacios:</li>
-    <li class="met4">Números:</li>
-    <li class="met5">Suma números:</li>
-    <li class="met6">Promedio longitud:</li>
+    <li class="met" data-testid="word-count">Palabras:</li>
+    <li class="met" data-testid="character-count">Caracteres:</li>
+    <li class="met" data-testid="character-no-spaces-count">Caracteres sin espacios:</li>
+    <li class="met" data-testid="number-count">Números:</li>
+    <li class="met" data-testid="number-sum">Suma números:</li>
+    <li class="met" data-testid="word-length-average">Promedio longitud:</li>
   </ul>
 
   <textarea name="user-input" placeholder="Ingresa tu texto aquí..."></textarea>

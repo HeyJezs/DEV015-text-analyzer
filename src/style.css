@@ -10,13 +10,25 @@ body {
     justify-content: center;
 }
 
-h1{
-    margin: 50px 0 20px 0;
+header {
+    background-color: #f1d7ff;
     color: #734a91;
-    font-weight: 800;
-    font-size: 60px;
-}
+    margin: 20px 0 20px 0;
+    text-align: center;
+    font-weight: 600;
+    font-size: 30px;
+  }
 
+  .met{
+    background-color: #a87bc7;
+    border-radius: 20px;
+    margin: 5px 0 5px 0; 
+    margin-bottom: 10px;
+    padding: 15px;
+    height: 50px;
+    width: 175px; /* ancho de cajas */
+  }
+    
 ul{
     display: grid;
     grid-template-columns: 200px 200px 200px;
@@ -28,17 +40,11 @@ ul{
 li{
     /*texto*/
     list-style-type: none;
-    text-align:left; /* alineacion del texto dentro de cajas */
+    text-align:center; /* alineacion del texto dentro de cajas */
     color:#f1d7ff; /* color del texto dentro de cajas */
-    /*cajas*/
-    background-color: #a87bc7; /* color de cajas */
-    border-radius: 20px; /* redondeado de cajas */
-    margin: 5px 0 5px 0; /* margen alrededor de cajas */
-    padding: 15px; /* espacio dentro de cajas */
-    width: 175px; /* ancho de cajas */
 }
 
-textarea{
+textarea[name="user-input"] {
     /*texto*/
     font-family: Georgia;
     font-size:large;
@@ -51,7 +57,7 @@ textarea{
     width: 600px;    
 }
 
-button{
+#reset-button {
     /*texto*/
     font-family: Georgia;
     font-size: medium;
@@ -66,5 +72,8 @@ button{
 }
 
 footer{
+    background-color: #f1d7ff;
     color: #a87bc7;
+    padding: 10px;
+    text-align: center;
 }
