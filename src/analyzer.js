@@ -20,8 +20,8 @@ const analyzer = {
     return words.length ? parseFloat((totalLength / words.length).toFixed(2)) : 0;
   },
   getNumberCount: (text) => {
-    const numbers = text.match(/\b\d+\b/g);
-    if (numbers) {
+    const numbers = text.match(/\b\d+(\.\d+)?\b/g);
+    if (numbers !== null) {
         return numbers.length;
       } else {
         return 0;
@@ -29,13 +29,14 @@ const analyzer = {
   },
   getNumberSum: (text) => {
     // arreglar expresion regular de arriba y corregir aca
-    const numbers = text.match(/\d/g);
-    let sum = 0;
-    if (numbers) {
-      for (let i = 0; i < numbers.length; i++) {
-        sum += parseFloat(numbers[i]);
-      }
+    const numbers = text.match(/\b\d+(\.\d+)?\b/g);
+    if (numbers !== null) {
+      return 0;
     }
+    let sum = 0;
+    for (let i = 0; i < numbers.length; i++) {
+        sum += parseFloat(numbers[i],10);
+      }
     return sum;
   },
 };
