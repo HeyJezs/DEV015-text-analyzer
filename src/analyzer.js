@@ -1,5 +1,12 @@
 const analyzer = {
-
+  getWordCount: (text) => {
+    text = text.trim();
+    if (text === '') {
+      return 0;
+    }
+    const words = text.split(/\s+/).filter(word => word !== '');
+    return words.length;
+  },
   getCharacterCount: (text) => {
     return text.length;
   },
