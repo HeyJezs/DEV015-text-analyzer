@@ -29,12 +29,12 @@ const analyzer = {
   },
   getNumberSum: (text) => {
     const numbers = text.match(/\b\d+(\.\d+)?\b/g);
-    if (numbers !== null) {
+    if (numbers === null) {
       return 0;
     }
     let sum = 0;
     for (let i = 0; i < numbers.length; i++) {
-      sum += parseFloat(numbers[i],10);
+      sum += parseFloat(numbers[i]);
     }
     return sum;
   },
