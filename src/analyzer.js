@@ -1,12 +1,5 @@
 const analyzer = {
-  getWordCount: (text) => {
-    text = text.trim();
-    if (text === '') {
-      return 0;
-    }
-    const words = text.split(/\s+/).filter(word => word !== '');
-    return words.length;
-  },
+
   getCharacterCount: (text) => {
     return text.length;
   },
@@ -22,21 +15,20 @@ const analyzer = {
   getNumberCount: (text) => {
     const numbers = text.match(/\b\d+(\.\d+)?\b/g);
     if (numbers !== null) {
-        return numbers.length;
-      } else {
-        return 0;
-      }
+      return numbers.length;
+    } else {
+      return 0;
+    }
   },
   getNumberSum: (text) => {
-    // arreglar expresion regular de arriba y corregir aca
     const numbers = text.match(/\b\d+(\.\d+)?\b/g);
     if (numbers !== null) {
       return 0;
     }
     let sum = 0;
     for (let i = 0; i < numbers.length; i++) {
-        sum += parseFloat(numbers[i],10);
-      }
+      sum += parseFloat(numbers[i],10);
+    }
     return sum;
   },
 };
