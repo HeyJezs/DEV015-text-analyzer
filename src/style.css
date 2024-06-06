@@ -27,6 +27,7 @@ header {
     padding: 15px;
     height: 50px;
     width: 175px; /* ancho de cajas */
+    font-size: large;
   }
     
 ul{

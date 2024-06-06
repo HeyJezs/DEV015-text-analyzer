@@ -10,7 +10,7 @@ document.addEventListener('DOMContentLoaded', () => {
     listItems[1].textContent = `Caracteres: ${analyzer.getCharacterCount(text)}`;
     listItems[2].textContent = `Caracteres sin espacios: ${analyzer.getCharacterCountExcludingSpaces(text)}`;
     listItems[3].textContent = `Números: ${analyzer.getNumberCount(text)}`;
-    listItems[4].textContent = `Suma números: ${analyzer.getNumberSum(text)}`;
+    listItems[4].textContent = `Suma de números: ${analyzer.getNumberSum(text)}`;
     listItems[5].textContent = `Promedio longitud: ${analyzer.getAverageWordLength(text)}`;
   };
 
